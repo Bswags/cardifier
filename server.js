@@ -1,20 +1,19 @@
-var http = require("http");
-var url = require("url");
+var http = require('http');
+var url = require('url');
+var express = require('express');
 
-function start(route) {
-	function onRequest(request, response) {
-		var pathname = url.parse(request.url).pathname;
-		console.log("Request for " + pathname + " received");
-		
-		route(pathname);
+var app = express();
 
-		response.writeHead(200, {"Content-Type": "text/plain"});
-		response.write("Hello World");
-		response.end();
-	}
+var server = http.server(app);
 
-	http.createServer(onRequest).listen(8888);
-	console.log("Server has started");
-}
+app.get('/hello.txt', function(req, res){
+  var body = 'Hello World';
+  res.setHeader('Content-Type', 'text/plain');
+  res.setHeader('Content-Length', Buffer.byteLength(body));
+  res.end(body);
+});
 
-exports.start = start;
+var port = process.env.PORT || 5000;
+server.listen(port, function() {
+  console.log("Listening on " + port);
+}); 
