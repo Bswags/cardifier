@@ -13,16 +13,24 @@ app.configure(function () {
 	app.use(express.static(__dirname + '/public'));
 });
 
-app.get('/', function(req, res){
-  res.render('index.html');
-  res.end();
+app.set('views', __dirname + '/public');
+app.engine('.html', require('ejs').renderFile);
+
+app.get('/', function(req, res) {
+  	res.render('index.html');
+  	res.end();
+});
+
+app.get('/new', function(req, res) {
+	res.render('card.html');
+	res.end();
 });
 
 app.get('/new/birthday', makeCard.birthday);
 app.get('/new/valentine', makeCard.valentine);
 app.get('/new/wedding', makeCard.wedding);
 
-app.get('/share', function(req, res){
+app.get('/share', function(req, res) {
   var body = 'Sharing your card';
   res.setHeader('Content-Type', 'text/plain');
   res.setHeader('Content-Length', Buffer.byteLength(body));

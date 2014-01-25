@@ -7,6 +7,8 @@
     "express": "3.x",
     "backbone": "1.1.0",
     "underscore": "~1.5.2",
+    "ejs": "0.8.5",
+    "jade": "1.1.5",
     "flickrapi": "0.3.12"
   },
   "scripts": {
