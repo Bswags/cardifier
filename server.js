@@ -7,9 +7,12 @@ var shareCard = require('./routes/shareCard');
 
 var app = express();
 
-var server = http.server(app);
+app.configure(function () {
+	app.use(express.logger('dev'));
+	app.use(express.bodyParser());
+});
 
-app.get('/hello', function(req, res){
+app.get('/', function(req, res){
   var body = 'Hello World';
   res.setHeader('Content-Type', 'text/plain');
   res.setHeader('Content-Length', Buffer.byteLength(body));
@@ -28,6 +31,6 @@ app.get('/share', function(req, res){
 });
 
 var port = process.env.PORT || 5000;
-server.listen(port, function() {
+app.listen(port, function() {
   console.log("Listening on " + port);
 }); 
