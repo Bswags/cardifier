@@ -20,8 +20,8 @@
     <div id="summary">A shitty greeting card for every occasion</div>
 
     <div id="userinfo">
-      <form id="info">
-        <div>I want a... <select id="type" name="cardkind">
+      <form id="info" action="new" method="GET">
+        <div>I want a <select id="type" name="cardkind">
           <option value="bday">birthday card</option>
           <option value="vday">valentine's card</option>
           <option value="wedding">wedding card</option>
@@ -29,8 +29,9 @@
         </select></div><br />
         <div>For <input id="to" type="text" name="tofield"></div><br />
         <div>From <input id="from" type="text" name="fromfield"></div><br />
-        <input id="makeButton" type="submit" href="new" value="Make me a card!">
+        <input id="makeButton" type="submit" value="Make me a card!">
       </form>
+      <div id="test"></div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
