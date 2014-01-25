@@ -10,13 +10,12 @@ var app = express();
 app.configure(function () {
 	app.use(express.logger('dev'));
 	app.use(express.bodyParser());
+	app.use(express.static(__dirname + '/public'));
 });
 
 app.get('/', function(req, res){
-  var body = 'Hello World';
-  res.setHeader('Content-Type', 'text/plain');
-  res.setHeader('Content-Length', Buffer.byteLength(body));
-  res.end(body);
+  res.render('index.html');
+  res.end();
 });
 
 app.get('/new/birthday', makeCard.birthday);
