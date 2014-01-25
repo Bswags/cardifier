@@ -7,5 +7,22 @@
     "express": "3.x",
     "backbone": "1.1.0",
     "underscore": "~1.5.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bswags/cardifier.git"
+  },
+  "keywords": [
+    "hacktech"
+  ],
+  "author": "brian wagner",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Bswags/cardifier/issues"
   }
 }
