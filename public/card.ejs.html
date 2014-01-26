@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cardifier</title>
+    <title>Cardify</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -16,26 +16,21 @@
 
   <body>
 
-    <h1 id="pgtitle">Cardifier</h1>
-    <div id="summary">Tell that special someone how you really feel</div>
+    <h1>Here ya go</h1>
 
-    <div id="userinfo">
-      <form id="info" action="new" method="GET">
-        <div>Make me a card...
-          <!--
-          <select id="type" name="cardkind">
-          <option value="bday">birthday card</option>
-          <option value="vday">valentine's card</option>
-          <option value="wedding">wedding card</option>
-          <option value="generic">random card</option>
-          </select>
-          -->
-      </div><br />
-        <div>For <input id="to" type="text" name="tofield"></div><br />
-        <div>From <input id="from" type="text" name="fromfield"></div><br />
-        <input id="makeButton" type="submit" value="Go!">
-      </form>
-      <div id="test"></div>
+    <div id="cardcontent" style="background:url('http://farm8.staticflickr.com/7392/9133713914_e79b2c7bec.jpg') no-repeat">
+      <div id="verse">
+        Dear,<br /><%=cardText%><br />&lt;3,<br />Brian<br />
+      </div>
+    </div>
+
+    <div id="share">
+      <p>Time to send your card</p>
+      <ul>
+        <li>Email</li>
+        <li>Facebook</li>
+        <li>Twitter</li>
+      </ul>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

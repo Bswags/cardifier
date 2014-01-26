@@ -21,14 +21,15 @@ app.get('/', function(req, res) {
   	res.end();
 });
 
-app.get('/new', function(req, res) {
+app.get('/newCard', function(req, res) {
 	res.render('card.html');
 	res.end();
 });
 
-app.get('/new/birthday', makeCard.birthday);
-app.get('/new/valentine', makeCard.valentine);
-app.get('/new/wedding', makeCard.wedding);
+app.get('/new', makeCard.makeCard);
+//app.get('/new/birthday', makeCard.birthday);
+//app.get('/new/valentine', makeCard.valentine);
+//app.get('/new/wedding', makeCard.wedding);
 
 app.get('/share', function(req, res) {
   var body = 'Sharing your card';

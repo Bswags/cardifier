@@ -17,6 +17,17 @@
   font-size: 18px;
 }
 
+#cardcontent {
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  width: 600px;
+}
+
+#share ul {
+  display: inline;
+}
+
 .clearfix {
   *zoom: 1;
 }
